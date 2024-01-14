@@ -4,9 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropDown from '@/components/DropDown'
 import { useState } from "react";
+import { IoMenuOutline } from "react-icons/io5";
+import blankImage from "/public/blankimage.png"
+import Image from "next/image";
+
 export default function Navbar() {
     const pathname = usePathname().split("/")[1];
-    const [visible,setVisible]=useState(true);
+    const [visible,setVisible]=useState(false);
 
   return (
     <>
@@ -19,10 +23,10 @@ export default function Navbar() {
           <NavItem curPath={pathname} to='/sell'>Sell</NavItem>
           <NavItem curPath={pathname} to='/customerService'>Customer service</NavItem>
     </nav>
-      <div className='flex justify-between items-center'>
+      <div className='flex justify-between items-center '>
           {/* search */}
           <div className='max-w-md'>
-            <div className="relative flex items-center w-full h-12 rounded-xl focus-within:shadow-md bg-slate-50 overflow-hidden">
+            <div className="relative flex items-center w-full h-12 rounded-xl focus-within:shadow-md border bg-slate-50 overflow-hidden">
                 <div className="grid place-items-center h-full w-12 text-gray-300 bg-slate-50">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -37,14 +41,13 @@ export default function Navbar() {
             </div>
           </div>
 
-        <hr className="mr-8 ml-4 bg-gray-200 border-0 dark:bg-gray-300 h-2 w-px shadow-md"/>
+        <hr className="mr-8 ml-4 bg-gray-200 border-0 dark:bg-gray-300 h-8 w-px shadow-md"/>
         {/* sign in */}
           
           <div>
-          <Button className="h-[2.6rem] flex items-center"  placeholder={undefined} onClick={()=>setVisible(true)}>
-              Sign In
-          </Button> 
-          <DropDown setVisible={setVisible} visible={visible} items={ [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
+
+            <ProfileButton clickEvent={setVisible}/>
+            <DropDown setVisible={setVisible} visible={visible} items={ [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
         
         
@@ -54,6 +57,20 @@ export default function Navbar() {
     </>
   )
 }
+
+interface ProfileButtonProps{
+  clickEvent:any;
+}
+
+function ProfileButton(config: ProfileButtonProps){
+  return(
+    <div onClick={()=>config.clickEvent(true)} className="bg-white hover:shadow-md border rounded-full flex items-center justify-center gap-3 px-3 p-2">
+      <IoMenuOutline size={"1.5rem"} />
+      <img src="blankimage.jpg" className="rounded-full h-[30.6px] w-[30.6px]" alt="Profile Pic" />
+    </div>
+  )
+}
+
 interface NavItemProps {
     to: string;
     curPath: string;
@@ -70,7 +87,7 @@ interface NavItemProps {
      
         <Link
           href={to}
-          className={`hover:bg-gray-200 rounded-3xl h-10 p-4 flex items-center justify-center ${activeClass}`}
+          className={`hover:bg-gray-100 rounded-3xl h-10 p-4 flex items-center justify-center ${activeClass}`}
         >
           {children}
         </Link>
