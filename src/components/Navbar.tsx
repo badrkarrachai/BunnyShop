@@ -3,8 +3,11 @@ import { Button } from "@/components/Material"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropDown from '@/components/DropDown'
+import { useState } from "react";
 export default function Navbar() {
-    const pathname = usePathname().split("/")[1];;
+    const pathname = usePathname().split("/")[1];
+    const [visible,setVisible]=useState(true);
+
   return (
     <>
     <div className='flex  items-center bg-white text-black  justify-between px-10 p-3 shadow-sm'>
@@ -38,10 +41,10 @@ export default function Navbar() {
         {/* sign in */}
           
           <div>
-          <Button className="h-[2.6rem] flex items-center"  placeholder={undefined}>
+          <Button className="h-[2.6rem] flex items-center"  placeholder={undefined} onClick={()=>setVisible(true)}>
               Sign In
           </Button> 
-          <DropDown items={{'Sign In':"/Login"}}/>       
+          <DropDown setVisible={setVisible} visible={visible} items={ [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
         
         

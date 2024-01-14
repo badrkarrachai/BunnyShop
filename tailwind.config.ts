@@ -15,6 +15,18 @@ const config: Config = withMT({
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      keyframes:()=>( {
+        DownToUp: {
+        '0%': { transform: 'translateY(47%)', 
+                opacity: 0},
+        '100%': { transform: 'translateY(0%)',
+                  opacity: 1},
+      },
+      animation: {
+        DownToUp: 'DownToUp 0.4s ease-in-out forwards',
+    
+      }
+    })
     },
   },
   plugins: [],
