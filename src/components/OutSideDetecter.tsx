@@ -27,11 +27,17 @@ function useOutsideAlerter(ref:any, setVisible:any) {
 /**
  * Component that alerts if you click outside of it
  */
-export default function OutsideAlerter(props:any) {
+interface OutsideAlerterProps{
+  children: any;
+  setVisible:any;
+  classOfIt:string;
+}
+export default function OutsideAlerter(props:OutsideAlerterProps) {
   const wrapperRef = useRef(null);
   const { setVisible } = props;
+  
 
   useOutsideAlerter(wrapperRef, setVisible);
 
-  return <div ref={wrapperRef}>{props.children}</div>;
+  return <div className={props.classOfIt} ref={wrapperRef}>{props.children}</div>;
 }

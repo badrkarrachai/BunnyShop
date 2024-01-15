@@ -10,6 +10,12 @@ const config: Config = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        'phone': '744px',
+        'monitor': '1212px',
+        'nav':'783px',
+         'new':'1212px',
+      },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',
       },

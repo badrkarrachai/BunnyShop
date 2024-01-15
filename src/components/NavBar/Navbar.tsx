@@ -7,6 +7,7 @@ import { useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import blankImage from "/public/blankimage.png"
 import Image from "next/image";
+import NaveBarItems from "./NavbarItems";
 
 export default function Navbar() {
     const pathname = usePathname().split("/")[1];
@@ -14,18 +15,13 @@ export default function Navbar() {
 
   return (
     <>
-    <div className='flex  items-center bg-white text-black  justify-between px-10 p-3 shadow-sm'>
-        <img src="smile.png" alt="Logo" className='h-[45px] w-[45px]'/>
-        <nav className='flex justify-center items-center gap-4 px-10'>
-          <div className=''><NavItem curPath={pathname} to='/'>Home</NavItem></div>
-          <NavItem curPath={pathname} to='/todayDeals'>Today's Deals</NavItem>
-          <NavItem curPath={pathname} to='/giftCards'>Gift Cards</NavItem>
-          <NavItem curPath={pathname} to='/sell'>Sell</NavItem>
-          <NavItem curPath={pathname} to='/customerService'>Customer service</NavItem>
-    </nav>
-      <div className='flex justify-between items-center '>
+    <div className='flex flex-col sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b'>
+      <div className="flex justify-between w-full">
+      <img src="smile.png" alt="Logo" className='hidden sm:inline h-[45px] w-[45px] cursor-pointer'/>
+      <NaveBarItems type="0" classNav="hidden text-sm new:text-base xl:flex justify-center items-center new:gap-4 gap-2 px-10"/>
+      <div className='flex justify-between items-center w-full md:w-auto '>
           {/* search */}
-          <div className='max-w-md'>
+          <div className='w-full nav:max-w-md sm:ml-5 nav:ml-0'>
             <div className="relative flex items-center w-full h-12 rounded-xl focus-within:shadow-md border bg-slate-50 overflow-hidden">
                 <div className="grid place-items-center h-full w-12 text-gray-300 bg-slate-50">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,7 +37,7 @@ export default function Navbar() {
             </div>
           </div>
 
-        <hr className="mr-8 ml-4 bg-gray-200 border-0 dark:bg-gray-300 h-8 w-px shadow-md"/>
+        <hr className="mr-2 ml-2 sm:mr-8 sm:ml-4 bg-gray-200 border-0 dark:bg-gray-300 h-8 w-px shadow-md"/>
         {/* sign in */}
           
           <div>
@@ -49,9 +45,9 @@ export default function Navbar() {
             <ProfileButton clickEvent={setVisible}/>
             <DropDown setVisible={setVisible} visible={visible} items={ [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
-        
-        
       </div>
+      </div>
+       <NaveBarItems type="0" classNav="hidden md:flex xl:hidden justify-center items-center gap-4  mb-3"/>
     </div>
     
     </>
@@ -64,33 +60,10 @@ interface ProfileButtonProps{
 
 function ProfileButton(config: ProfileButtonProps){
   return(
-    <div onClick={()=>config.clickEvent(true)} className="bg-white hover:shadow-md border rounded-full flex items-center justify-center gap-3 px-3 p-2">
+    <div onClick={()=>config.clickEvent(true)} className="bg-white w-24 cursor-pointer hover:shadow-md border rounded-full flex items-center justify-center gap-3 px-3 p-2">
       <IoMenuOutline size={"1.5rem"} />
       <img src="blankimage.jpg" className="rounded-full h-[30.6px] w-[30.6px]" alt="Profile Pic" />
     </div>
   )
 }
 
-interface NavItemProps {
-    to: string;
-    curPath: string;
-    children: React.ReactNode;
-  }
-  
-  const NavItem: React.FC<NavItemProps> = ({ to, curPath, children }) => {
-    const isActive = curPath === to.slice(1); // Checking if the current path matches the link
-    const activeClass = isActive
-      ? "text-black font-medium"
-      : "text-[#8b8b8b]";
-  
-    return (
-     
-        <Link
-          href={to}
-          className={`hover:bg-gray-100 rounded-3xl h-10 p-4 flex items-center justify-center ${activeClass}`}
-        >
-          {children}
-        </Link>
-      
-    );
-  };
