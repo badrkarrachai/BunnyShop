@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import OutsideAlerter from "../OutSideDetecter";
 import { Input } from "@material-tailwind/react";
 import { Button } from "@material-tailwind/react";
+import Link from "next/link";
 interface LogInProps{
   isVisible:any;
 }
@@ -48,8 +49,10 @@ export default function Login(config:LogInProps) {
                 labelProps={{
                   className: "hidden",
                 }}
-                containerProps={{ className: "min-w-[100px]" }} crossOrigin={undefined}/>                
+                containerProps={{ className: "min-w-[100px]" }} crossOrigin={undefined}/>   
+                <div className="text-xs mt-1">Effortlessly access your account using your email and password, You can learn more if you visit our privacy and policy </div>     
             </div>
+            
             <div className="flex flex-col gap-5">
               <div className="w-full mt-6">
                 <Button size="md" placeholder={undefined} className="w-full h-12 text-base">Sign in</Button>
