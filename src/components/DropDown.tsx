@@ -29,6 +29,7 @@ export default function dropDown(config : DropDownProps) {
       }
     return(
         <>
+        
         {loginActive && <Login isVisible={setLoginActive}/>}
         {config.visible && <OutsideAlerter classOfIt="" setVisible={config.setVisible}>
           <motion.div animate={config.visible ? 'open' : 'closed'} initial={{ opacity: 0 }} variants={menuVariants} className="bg-white rounded-xl flex flex-col  w-[240px] shadow-new1 absolute ml-[-148px] mt-2 py-2 ">
