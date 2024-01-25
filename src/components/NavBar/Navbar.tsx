@@ -3,16 +3,35 @@ import { Button } from "@/components/Material"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import DropDown from '@/components/DropDown'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMenuOutline } from "react-icons/io5";
 import blankImage from "/public/blankimage.png"
 import Image from "next/image";
 import NaveBarItems from "./NavbarItems";
+import Cookies from 'universal-cookie';
 
 export default function Navbar() {
     const pathname = usePathname().split("/")[1];
     const [visible,setVisible]=useState(false);
-
+    const [firstVisite,FirstVisite] = useState(true);
+    const cookies = new Cookies();
+  
+    useEffect(() => {
+      // Check if the user has a specific cookie
+      const hasVisitedBefore = cookies.get('visitedBefore');
+  
+      if (hasVisitedBefore) {
+        // User has visited before
+        FirstVisite((prv)=> prv = false);
+      } else {
+        // User is visiting for the first time
+        FirstVisite((prv)=> prv = true);
+        
+        // Set a cookie to indicate that the user has visited
+        cookies.set('visitedBefore', true, { path: '/' });
+      }
+    }, []);
+  
   return (
     <>
     <div className='flex flex-col sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b'>
@@ -23,7 +42,7 @@ export default function Navbar() {
           {/* search */}
           <div className='w-full nav:max-w-md sm:ml-5 nav:ml-0'>
             <div className="relative flex items-center w-full h-12 rounded-xl focus-within:shadow-md border bg-slate-50 overflow-hidden">
-                <div className="grid place-items-center h-full w-12 text-gray-300 bg-slate-50">
+                <div className="grid place-items-center h-full w-12 text-gray-500 bg-slate-50">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
@@ -43,7 +62,7 @@ export default function Navbar() {
           <div>
 
             <ProfileButton clickEvent={setVisible}/>
-            <DropDown setVisible={setVisible} visible={visible} items={ [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
+            <DropDown setVisible={setVisible} visible={visible} firstVisite={firstVisite} items={ firstVisite === true?[   {display:"Sign Up",to:"/signUp"},{display:"Log In",to:"/login"}]: [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
       </div>
       </div>

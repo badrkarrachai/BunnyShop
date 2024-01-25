@@ -2,7 +2,12 @@
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion"
 import OutsideAlerter from "../OutSideDetecter";
-import LoginForm from "./LoginForm";
+import { Input } from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
+import Link from "next/link";
+
+
+
 interface LogInProps{
   isVisible:any;
 }
@@ -10,18 +15,59 @@ export default function Login(config:LogInProps) {
   
   return (
     <div className='w-full h-full absolute inset-0 bg-[#02020267] flex justify-center items-end phone:items-center z-30 phone:py-11'>
-      <OutsideAlerter classOfIt="  rounded-xl shadow-lg w-full phone:w-[568px] h-full max-h-[680px]" setVisible={config.isVisible}>
+      <OutsideAlerter classOfIt="  rounded-xl shadow-lg w-full phone:w-[568px] h-auto max-h-[680px]" setVisible={config.isVisible}>
         <motion.div initial={{y:'100%',opacity:0}}  animate={{y:0,opacity:1}} className='bg-white  rounded-xl shadow-lg w-full phone:w-[568px] h-full max-h-[680px] '>
-          <div className="flex flex-col h-full">
-          <div className="border-b py-4 flex w-full px-5 ">
+          <div className="border-b py-4 flex items-center px-5 ">
             <div className="hover:bg-gray-100 p-2 cursor-pointer rounded-full" onClick={()=>config.isVisible(false)}><IoClose size="1.2rem" color="#262626" /></div>
-            <div className="w-full flex items-center justify-center">
+            <div className="w-full flex justify-center">
             <span className="text-center font-semibold">Log in or sign up</span>
             </div>
           </div>
-          <div className="flex justify-center items-center h-full"><LoginForm/></div>
+          <div className="flex flex-col gap-5 px-10 py-10">
+
+            <div className="text-2xl font-medium text-gray-900">Welcome to BunnyShop</div>
+
+            <div className="flex flex-col gap-1">
+                  <div className=" text-sm font-normal">
+                    Email :
+                  </div>
+                  <Input
+                      type="email"
+                      placeholder="email@example.com"
+                      className="!border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                      labelProps={{
+                        className: "hidden",
+                      }}
+                      containerProps={{ className: "min-w-[100px]" }} crossOrigin={undefined}/>                
+            </div>
+            <div className="flex flex-col gap-1">
+                  <div className=" text-sm font-normal">
+                    Password :
+                  </div>
+                   <Input
+                type="password"
+                placeholder="**********"
+                
+                className="!border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500 focus:!border-gray-900 focus:!border-t-gray-900 focus:ring-gray-900/10"
+                labelProps={{
+                  className: "hidden",
+                }}
+                containerProps={{ className: "min-w-[100px]" }} crossOrigin={undefined}/>   
+                <div className="text-xs mt-2 text-gray-700">Effortlessly access your account using your email and password, You can learn more if you visit our <span className="underline font-medium cursor-pointer text-black">Privacy Policy  </span> </div>     
+            </div>
+            
+            <div className="flex flex-col gap-5">
+              <div className="w-full mt-6">
+                <Button size="md" placeholder={undefined} className="w-full h-12 text-base">Sign in</Button>
+              </div>
+              <div className="flex gap-4 flex-col sm:flex-row ">
+                <Button size="md" placeholder={undefined} className="w-full h-14 text-base !border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500"><img src="google.png" alt="Logo" className='inline h-5 w-5'/> </Button> 
+                <Button size="md" placeholder={undefined} className="w-full h-14 text-base !border !border-gray-300 bg-white text-gray-900 shadow-lg shadow-gray-900/5 ring-4 ring-transparent placeholder:text-gray-500"><img src="facebook.png" alt="Logo" className='inline h-5 w-5'/></Button>
+              </div>
+            </div>
+            
+
           </div>
-          
         </motion.div>
         </OutsideAlerter>
     </div>
