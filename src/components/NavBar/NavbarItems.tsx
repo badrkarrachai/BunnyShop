@@ -29,8 +29,8 @@ interface NavItemProps {
   const NavItem: React.FC<NavItemProps> = ({ to, curPath, children,type }) => {
     const isActive = curPath === to.slice(1); // Checking if the current path matches the link
     const activeClass = isActive
-      ? "text-black font-medium"
-      : "text-[#8b8b8b]";
+      ? "text-[#B0926A] font-medium"
+      : "text-[#0e0e0e]";
   
     return (
      

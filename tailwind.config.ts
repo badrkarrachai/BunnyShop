@@ -15,14 +15,15 @@ const config: Config = withMT({
         'monitor': '1212px',
         'nav':'783px',
          'new':'1212px',
+        'prod1280':'1280px',
+        'prod1880':'1880px'
       },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       keyframes: {
         DownToUp: {
