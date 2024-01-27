@@ -12,9 +12,9 @@ export default function ProductCard(config: ProductCardPops) {
     <>
         <div className="px-1 sm:px-6 flex-col flex gap-2 animate-DownToUp">
           <div className="flex items-center justify-between">
-          <div className="text-3xl ml-4 font-bold">{config.title}</div>
+          <div className="sm:text-3xl text-[1.3rem] ml-4 font-bold">{config.title}</div>
           <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
-            Shop the collection{" "}
+            Shop the collection
             <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
