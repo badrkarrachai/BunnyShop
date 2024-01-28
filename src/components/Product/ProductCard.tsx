@@ -76,7 +76,6 @@ function SmallCard(config:smallCardsProps){
                   className="!absolute  top-2/4 right-4 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[48px] h-9 max-h-[48px] text-white hover:bg-white/10 active:bg-white/30 grid place-items-center"
                 >
                   <img src="chevron-right.svg" className="hidden group-hover:inline" alt="" />
-
                 </button>
               )}
               prevArrow={({ loop, handlePrev, firstIndex }) => {
