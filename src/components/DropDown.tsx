@@ -37,7 +37,7 @@ export default function dropDown(config : DropDownProps) {
         
         {loginActive && <Login isVisible={setLoginActive}/>}
         {config.visible && <OutsideAlerter classOfIt="" setVisible={config.setVisible}>
-          <motion.div animate={config.visible ? 'open' : 'closed'} initial={{ opacity: 0 }} variants={menuVariants} className="bg-white rounded-xl flex flex-col  w-[240px] shadow-new1 absolute ml-[-148px] mt-2 py-2 ">
+          <motion.div animate={config.visible ? 'open' : 'closed'} initial={{ opacity: 0 }} variants={menuVariants} className="bg-white rounded-xl flex flex-col  w-[240px] shadow-new1 absolute ml-[-148px] mt-2 py-2 z-50">
         
                 {config.items.map((item,i) =>(
                     item.display !== "split" ?(<div key={i} className={`${item.to === "/login" && config.firstVisite === false ?  "font-semibold": item.to === "/signUp" && config.firstVisite === true ? "font-semibold" : "font-normal" } hover:bg-gray-100 flex items-center w-full text-sm p-[0.60rem] pl-4 cursor-pointer`} onClick={() => {
