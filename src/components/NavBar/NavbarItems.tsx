@@ -10,7 +10,7 @@ export default function NaveBarItems(props: NaveBarProps){
     return(
         <nav className={props.classNav}>
         <NavItem type={props.type} curPath={pathname} to='/'>Home</NavItem>
-        <NavItem type={props.type} curPath={pathname} to='/todayDeals'>Today's Deals</NavItem>
+        <NavItem type={props.type} curPath={pathname} to='/todayDeals'>Super Deals</NavItem>
         <NavItem type={props.type} curPath={pathname} to='/giftCards'>Gift Cards</NavItem>
         <NavItem type={props.type} curPath={pathname} to='/sell'>Sell</NavItem>
         <NavItem type={props.type} curPath={pathname} to='/customerService'>Customer service</NavItem>

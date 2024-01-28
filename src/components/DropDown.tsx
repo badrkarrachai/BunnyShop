@@ -17,7 +17,7 @@ interface DropDownProps{
     firstVisite:boolean;
     
 }
-export default function dropDown(config : DropDownProps) {
+export default function DropDown(config : DropDownProps) {
   
 
 
@@ -52,10 +52,20 @@ export default function dropDown(config : DropDownProps) {
                     {item.display}
                     </div>): (<div key={i} className="h-1 border-b w-full"></div>)
                 ))} 
+                
                 <div className="inline-block md:hidden" onClick={()=>config.setVisible(false)}>
                 <div className="h-1 border-b w-full" ></div>
                 <NaveBarItems type="1" classNav=""/>
                 </div>        
+                <div className="inline-block sm:hidden">
+                  <div className="h-1 border-b w-full"></div>
+                  <div className=" hover:bg-gray-100 group flex items-center w-full text-sm p-[0.6rem] pl-4 cursor-pointer">
+                    <div className="flex items-center justify-between w-full">
+                      Cart
+                      <div className=" rounded-full bg-gray-100 group-hover:bg-white p-1 px-2 min-w-[1.7rem] mr-2 w-auto flex justify-center items-center text-sm">+10</div>
+                    </div>
+                  </div>
+                </div>
             </motion.div>
         </OutsideAlerter>}
         </>

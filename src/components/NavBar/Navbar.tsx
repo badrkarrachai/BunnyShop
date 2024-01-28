@@ -9,6 +9,7 @@ import blankImage from "/public/blankimage.png"
 import Image from "next/image";
 import NaveBarItems from "./NavbarItems";
 import Cookies from 'universal-cookie';
+import { LuShoppingCart } from "react-icons/lu";
 
 export default function Navbar() {
     const pathname = usePathname().split("/")[1];
@@ -27,8 +28,7 @@ export default function Navbar() {
         // User is visiting for the first time
         FirstVisite((prv)=> prv = true);
         
-        // Set a cookie to indicate that the user has visited
-        cookies.set('visitedBefore', true, { path: '/' });
+        
       }
     }, []);
   
@@ -38,7 +38,7 @@ export default function Navbar() {
     <div className='flex flex-col w-full max-w-[100rem] sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b'>
       <div className="flex justify-between w-full">
       <Link href={"/"}><img src="smile.png" alt="Logo" className='hidden sm:inline h-[45px] w-[45px] cursor-pointer'/></Link>
-      <NaveBarItems type="0" classNav="hidden text-sm new:text-base xl:flex justify-center items-center new:gap-4 gap-2 px-10"/>
+      <NaveBarItems type="0" classNav="hidden text-sm new:text-base navBarProtect:flex justify-center items-center new:gap-4 gap-2 px-10"/>
       <div className='flex justify-between items-center w-full md:w-auto '>
           {/* search */}
           <div className='w-full nav:max-w-md sm:ml-5 nav:ml-0'>
@@ -58,16 +58,22 @@ export default function Navbar() {
           </div>
 
         <hr className="mr-2 ml-2 sm:mr-8 sm:ml-4 bg-gray-200 border-0 dark:bg-gray-300 h-8 w-px shadow-md"/>
-        {/* sign in */}
+        {/* sign in and cart */}
           
-          <div>
+        <div className="flex gap-2 items-center">
+          <div  className="bg-white w-[3.2rem] hidden  cursor-pointer hover:shadow-md border rounded-full sm:flex items-center justify-center gap-3 px-2 p-4">
+            <LuShoppingCart  />
+            <div className="hidden h-2 w-2 mt-[-20px] mr-[-20px] bg-red-400 rounded-full absolute"></div>
+          </div>
 
+          <div>
             <ProfileButton clickEvent={setVisible}/>
             <DropDown setVisible={setVisible} visible={visible} firstVisite={firstVisite} items={ firstVisite === true?[   {display:"Sign Up",to:"/signUp"},{display:"Log In",to:"/login"}]: [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
+        </div>
       </div>
       </div>
-       <NaveBarItems type="0" classNav="hidden md:flex xl:hidden justify-center items-center gap-4  mb-3"/>
+       <NaveBarItems type="0" classNav="hidden md:flex navBarProtect:hidden justify-center items-center gap-4  mb-3"/>
     </div>
     </div>
     </>
