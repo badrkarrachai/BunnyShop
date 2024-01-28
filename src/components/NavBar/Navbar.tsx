@@ -62,7 +62,7 @@ export default function Navbar() {
           
         <div className="flex gap-2 items-center">
           <div  className="bg-white w-[3.2rem] hidden  cursor-pointer hover:shadow-md border rounded-full sm:flex items-center justify-center gap-3 px-2 p-4">
-            <LuShoppingCart  />
+            <LuShoppingCart color="rgb(43,43,44)"  />
             <div className="hidden h-2 w-2 mt-[-20px] mr-[-20px] bg-red-400 rounded-full absolute"></div>
           </div>
 
