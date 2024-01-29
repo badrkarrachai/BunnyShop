@@ -7,7 +7,7 @@ interface Servicesprops{
 }
 export default function Services(config: Servicesprops) {
   return (
-    <div className="sm:px-6 flex gap-3 px-4  flex-col mt-6 animate-DownToUp">
+    <div className="sm:px-6 flex gap-3 px-4  flex-col mt-8 animate-DownToUp">
         <div className="px-4 flex gap-3 flex-col">
           <div className="sm:text-3xl sm:px-0 px-2 text-[1.3rem] font-bold text-[rgb(19,23,39)]">{config.title}</div>
           <p className="text-sm sm:px-0 px-2 text-blue-gray-500">{config.discreption}</p>
@@ -77,28 +77,28 @@ export default function Services(config: Servicesprops) {
 
                     </div>
               </div>
-              <div className="bg-[#E8C872] rounded-[2rem] w-full lg:w-[35%] h-[23.5rem] flex items-center justify-center overflow-hidden">
+              <div className="bg-[#b0926ab9] rounded-[2rem] w-full lg:w-[35%] h-[23.5rem] flex items-center justify-center overflow-hidden">
                 <div className="flex flex-col gap-4 sm:gap-6 p-9 justify-center items-center">
                     <div className="text-2xl text-center font-semibold">Shop online, high quality products!</div>
                     <div className="text-base font-normal text-center max-w-[35rem]">Our platform leads globally, delivering top-quality, affordable products with unwavering excellence for unmatched customer value.</div>
-                    <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer text-center w-52 bg-[rgb(19,23,39)] h-12 text-base rounded-full">Shop with insurance</Button>
+                    <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer text-center w-52 bg-[rgb(19,23,39)] h-12 text-base rounded-full">Browse trending</Button>
                     <Button style={{textTransform:"initial"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
-            Our quality promise{" "}
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-5 w-5"
-            >
-            <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-            </svg>
-        </Button>
+                      Our quality promise{" "}
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-5 w-5"
+                      >
+                      <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                      />
+                      </svg>
+                    </Button>
 
                 </div>
               </div>

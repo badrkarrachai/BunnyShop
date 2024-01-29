@@ -10,6 +10,8 @@ import Image from "next/image";
 import NaveBarItems from "./NavbarItems";
 import Cookies from 'universal-cookie';
 import { LuShoppingCart } from "react-icons/lu";
+import CartPanel from "../CustomComponents/CartPanel";
+
 
 export default function Navbar() {
     const pathname = usePathname().split("/")[1];
@@ -31,9 +33,10 @@ export default function Navbar() {
         
       }
     }, []);
-  
+    const[CratPanelActive,setCartPanelActive] = useState(false);
   return (
     <>
+    {CratPanelActive && <CartPanel isVisible={setCartPanelActive}/>}
     <div className='flex justify-center items-center w-full'>
     <div className='flex flex-col w-full max-w-[100rem] sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b'>
       <div className="flex justify-between w-full">
@@ -61,8 +64,9 @@ export default function Navbar() {
         {/* sign in and cart */}
           
         <div className="flex gap-2 items-center">
-          <div  className="bg-white w-[3.2rem] hidden  cursor-pointer hover:shadow-md border rounded-full sm:flex items-center justify-center gap-3 px-2 p-4">
+          <div onClick={()=>setCartPanelActive(true)} className="bg-white w-[3.2rem] hidden  cursor-pointer hover:shadow-md border rounded-full sm:flex items-center justify-center gap-3 px-2 p-4">
             <LuShoppingCart color="rgb(43,43,44)"  />
+            
             <div className="hidden h-2 w-2 mt-[-20px] mr-[-20px] bg-red-400 rounded-full absolute"></div>
           </div>
 

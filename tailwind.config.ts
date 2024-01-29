@@ -23,9 +23,15 @@ const config: Config = withMT({
         'cour3':'850px',
         'cour4':'1018px',
         'cour5':'400px',
-        
-
-
+        'footeritems':'547px',
+        'to2':'854px',
+        'to3':'1144px',
+        'to4':'1400px',
+        'catTo6':'1484px',
+        'catTo5':'1279px',
+        'catTo4':'929px',
+        'catTo3':'791px',
+        'catToshrink1':'633px',
       },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',

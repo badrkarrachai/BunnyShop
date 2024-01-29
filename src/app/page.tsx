@@ -27,7 +27,7 @@ export default function Home() {
     image5="https://i.pinimg.com/564x/32/d3/35/32d335068ac672d1efc5e05a806962d3.jpg"/>
     <Categorys title='Shop by categories' discreption='You can start your shopping journey by selecting a product category.'/>
     <Services title='Services' discreption='Explore more than 10,000 products and assets with the best price.' />
-    <div className='h-44'></div>
+    <div className='h-10'></div>
     </div>
     </div>
     </div>

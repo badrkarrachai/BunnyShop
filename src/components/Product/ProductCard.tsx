@@ -65,13 +65,13 @@ function SmallCard(config:smallCardsProps){
 
   return(
     <>
-      <div className="flex hover:bg-gray-100 rounded-xl  cursor-pointer group flex-col h-auto sm:w-[50%] md:w-[33.33%] prod1280:w-[25%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
+      <div className="flex hover:bg-gray-100 rounded-xl  cursor-pointer group flex-col h-auto to2:w-[33.33%] to3:w-[25%] to4:w-[20%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
               <div className="flex justify-end">
               <div className="">
               <div className="ml-[-3.0rem] rounded-full hover:bg-[#b1b1b160] p-2 mt-[0.9rem] z-30 absolute "><FaRegHeart size={"1.2rem"} color={"#ffff"} /></div>
               </div>
               </div>
-              <div className="sm:h-[270px] h-[11rem]">
+              <div className="sm:h-[14rem] h-[11rem] md:h-[270px]">
             
               <Carousel
               nextArrow={({ loop, handleNext, lastIndex }) => (
