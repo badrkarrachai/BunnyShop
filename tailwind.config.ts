@@ -32,6 +32,7 @@ const config: Config = withMT({
         'catTo4':'929px',
         'catTo3':'791px',
         'catToshrink1':'633px',
+        'panel':'547px'
       },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',
@@ -45,14 +46,19 @@ const config: Config = withMT({
         '0%': { transform: 'translateY(20%)', opacity: 0},
         '100%': { transform: 'translateY(0%)',opacity: 1},
         },
+        RightToLeft: {
+          '0%': { transform: 'translateX(90%)', opacity: 0},
+          '100%': { transform: 'translateX(0%)',opacity: 1},
+        },
         Fade: {
           '0%': {opacity: 0},
           '100%': {opacity: 1},
-          }
+        }
       },
       animation: {
         DownToUp: 'DownToUp 0.4s ease-in-out forwards',
-        Fade: 'Fade 0.4s ease-in-out forwards'
+        Fade: 'Fade 0.4s ease-in-out forwards',
+        RightToLeft: 'RightToLeft 0.4s forwards'
       },
     
     },

@@ -21,7 +21,6 @@ export default function ProductCard(config: ProductCardPops) {
           <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
             Shop the collection
             <svg
-            xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             color="#B0926A"

@@ -72,7 +72,7 @@ export default function Navbar() {
 
           <div>
             <ProfileButton clickEvent={setVisible}/>
-            <DropDown setVisible={setVisible} visible={visible} firstVisite={firstVisite} items={ firstVisite === true?[   {display:"Sign Up",to:"/signUp"},{display:"Log In",to:"/login"}]: [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
+            <DropDown setCartPanelActive={setCartPanelActive} setVisible={setVisible} visible={visible} firstVisite={firstVisite} items={ firstVisite === true?[   {display:"Sign Up",to:"/signUp"},{display:"Log In",to:"/login"}]: [ {display:"Log In",to:"/login"} , {display:"Sign Up",to:"/signUp"}] }/>       
           </div>
         </div>
       </div>
