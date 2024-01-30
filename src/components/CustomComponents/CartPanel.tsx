@@ -18,7 +18,16 @@ function CartPanel(config:CartPanelProps) {
               <h3 className='font-semibold text-lg'>Cart </h3>
               <div onClick={()=>config.isVisible(false)}  className='hover:bg-gray-100 p-1 cursor-pointer rounded-full'><IoClose size="1.3rem" /></div>
             </div>
-            <div>
+            <div className='overflow-y-scroll w-full h-full'>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
+              <CartItem image='/prodtest.jpg'/>
               <CartItem image='/prodtest.jpg'/>
             </div>
             {/* <div className='flex justify-center items-center w-full mt-[-2rem] h-full flex-col text-[rgb(19,23,39)]'>
@@ -52,7 +61,7 @@ function CartItem(config:CartItemProps) {
             <Image src={config.image} width={110} className='rounded-lg' height={110} alt='prod'/>
             <div className='flex flex-col justify-between'>
               <div className='flex flex-col gap-1'>
-                <h3 className='text-[rgb(8,9,15)] font-medium'>Nike shoes - model </h3>
+                <h3 className='text-[rgb(8,9,15)] font-medium'>Nike shoes - model California designed by Apple</h3>
                 <p className='text-sm text-gray-600'>Shoes - Clothes</p>
               </div>
               <div className='hover:bg-gray-100 cursor-pointer active:bg-gray-300 w-[5.5rem] items-center flex justify-center rounded-full'>
