@@ -9,8 +9,8 @@ export default function Services(config: Servicesprops) {
   return (
     <div className="sm:px-6 flex gap-3 px-4  flex-col mt-8 animate-DownToUp">
         <div className="px-4 flex gap-3 flex-col">
-          <div className="sm:text-3xl sm:px-0 px-2 text-[1.3rem] font-bold text-[rgb(19,23,39)]">{config.title}</div>
-          <p className="text-sm sm:px-0 px-2 text-blue-gray-500">{config.discreption}</p>
+          <div className="sm:text-3xl sm:px-0  text-[1.3rem] font-bold text-[rgb(19,23,39)]">{config.title}</div>
+          <p className="text-sm sm:px-0  text-blue-gray-500">{config.discreption}</p>
         </div>
         <div className="flex flex-col gap-8 mt-2">
           <div className="w-full flex gap-8 lg:flex-row flex-col">

@@ -62,7 +62,7 @@ function Footer(onClick:any) {
                         </ul>
                     </div>
                     <div className="p-5">
-                        <ul>
+                    <ul>
                             <p className="text-[rgb(19,23,39)] font-bold text-2xl pb-4">Support</p>
                             <li className="text-gray-500 text-md pb-2 font-normal hover:text-[#B0926A] cursor-pointer">
                                 Contact

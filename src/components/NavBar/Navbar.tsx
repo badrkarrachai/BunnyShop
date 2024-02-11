@@ -38,7 +38,7 @@ export default function Navbar() {
     <>
     {CratPanelActive && <CartPanel isVisible={setCartPanelActive}/>}
     <div className='flex justify-center items-center w-full'>
-    <div className='flex flex-col w-full max-w-[100rem] sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b'>
+    <div className='flex flex-col w-full max-w-[100rem] sm:gap-6 items-center bg-white text-black  justify-between px-2 sm:px-10 py-3 border-b-2'>
       <div className="flex justify-between w-full">
       <Link href={"/"}><img src="smile.png" alt="Logo" className='hidden sm:inline h-[45px] w-[45px] cursor-pointer'/></Link>
       <NaveBarItems type="0" classNav="hidden text-sm new:text-base navBarProtect:flex justify-center items-center new:gap-4 gap-2 px-10"/>

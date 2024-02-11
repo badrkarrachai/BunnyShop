@@ -32,7 +32,8 @@ const config: Config = withMT({
         'catTo4':'929px',
         'catTo3':'791px',
         'catToshrink1':'633px',
-        'panel':'547px'
+        'panel':'547px',
+        '1024px':'1024px',
       },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',
@@ -60,7 +61,9 @@ const config: Config = withMT({
         Fade: 'Fade 0.4s ease-in-out forwards',
         RightToLeft: 'RightToLeft 0.4s forwards'
       },
-    
+      fontFamily: {
+        poppins:["Poppins","sans-serif"]
+      }
     },
   },
   plugins: [],
