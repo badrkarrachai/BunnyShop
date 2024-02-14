@@ -11,6 +11,7 @@ interface ProductCardPops{
   image3: string,
   image4: string,
   image5: string,
+  btnVisibile: boolean,
 }
 export default function ProductCard(config: ProductCardPops) {
   return (
@@ -18,7 +19,7 @@ export default function ProductCard(config: ProductCardPops) {
         <div className="px-1 sm:px-6 flex-col flex gap-2 animate-DownToUp">
           <div className="flex items-center justify-between">
           <div className="sm:text-3xl text-[1.3rem] ml-4 font-bold text-[rgb(19,23,39)]">{config.title}</div>
-          <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
+          {config.btnVisibile && <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
             Shop the collection
             <svg
             fill="none"
@@ -34,7 +35,7 @@ export default function ProductCard(config: ProductCardPops) {
                 d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
             />
             </svg>
-          </Button>
+          </Button>}
           </div>
           <p className="ml-4 text-sm text-blue-gray-500">{config.discreption}</p>
           <div className='flex flex-wrap w-full '>
