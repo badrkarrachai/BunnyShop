@@ -1,57 +1,50 @@
 "use client"
 import { Button, Carousel } from "@material-tailwind/react";
+import { ReactElement } from "react";
 
-export default function HeroSuperDeals() {
+
+
+export default function HeroSuperDeals(){
+  return(
+    <>
+      <div className="flex my-24 gap-4 h-auto px-20">
+        <div className="w-[70%]"><HeroSuperDealsCard image="camera.png" secondClass="hidden" Title='Sony FX3 with 4k Video recording high quality' firstClass="h-[100%] bg-[#F1DEC9]" discreption="This camera is one of the best cameras in the market it's made by Sony you cannot find like it anywhere else" Button={<Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-[9rem] bg-[rgb(19,23,39)] h-12 text-base">Shop now</Button>} upperTitle="20% sales this week"/></div>
+        <div className="w-[30%] flex flex-col gap-4">
+          <HeroSuperDealsCard image="airpods.png" Title='Sony FX3 with' secondClass="flex" firstClass="h-full bg-[#EAD7BB]" discreption="This camera is one of the best cameras" />
+          <HeroSuperDealsCard image="speaker.png" Title='Sony FX3 with' secondClass="flex" firstClass="h-full bg-[#F7E6C4]" discreption="This camera is one of the best cameras" />
+        </div>
+      
+      </div>
+    </>
+  )
+}
+
+interface HeroSuperDealsCardProps{
+  Title: string, 
+  discreption: string, 
+  image: string,
+  Button?: ReactElement, 
+  upperTitle?: string,
+  firstClass?: string,
+  secondClass?: string,
+}
+
+function HeroSuperDealsCard({Title, image, discreption, Button, upperTitle, firstClass, secondClass}:HeroSuperDealsCardProps) {
   return (
     <>
-    
-        <div className="flex xl:flex-row flex-col  w-full xl:h-[30rem] h-full gap-8 px-5 sm:px-10  my-20   animate-DownToUp">
-            <div className="flex lg:flex-row flex-col group justify-center items-center w-full xl:w-[75%] p-4 sm:p-8 bg-[#F1E4C3] gap-6">
-              <div className="lg:w-[50%] w-full flex flex-col justify-center lg:items-start items-center  px-4 gap-5">
-                  <div className="text-md sm:text-xl font-bold sm:font-semibold text-red-500">SUMMER SALE UPTO 20%</div>
-                  <div className="text-xl sm:text-3xl  font-semibold sm:font-bold text-center lg:text-left">Polaroid i-type Instant Camera</div>
-                  <div className="font-medium flex text-center lg:text-left text-blue-gray-500">This is our promise to you. we accept most product insurance plans both in and out of network</div>
-                  <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-[9rem] bg-[rgb(19,23,39)] h-12 text-base">Shop now</Button>
-              </div>
-                <div className="w-[75%]"><img src="camera.png" alt="img" className="h-full object-cover"/></div>
-            </div>
-            <div className="flex h-full flex-col  lg:flex-row xl:flex-col gap-8">
-                <div className="bg-[#dbda7fde]  w-full  h-[50%] flex  p-4 sm:p-8 overflow-hidden ">
-                  <div className="flex w-[50%] flex-col gap-4 sm:gap-6">
-                    <div className="flex flex-col gap-6 h-full justify-center ">
-                        <span className="text-lg sm:text-xl font-bold sm:font-extrabold">High-Quality Speaker</span>  
-                        <div className="flex flex-col gap-1">
-                            <span className="text-gray-500">Weekend Descount</span>    
-                            <div className="flex">
-                                <span className="text-xl sm:text-2xl text-red-500 font-extrabold">$129</span>
-                                <span className="text-gray-500 flex items-center ml-3">$200</span>
-                            </div>
-                        </div>                  
-                    </div>
-                  </div>
-                  <div className="w-[50%]">
-                      <img src="speaker.png" alt="img" className="h-full max-h-[250.94px] w-full object-cover"/>
-                  </div>
-                </div>
-                <div className="bg-[#dbda7fde]  w-full  h-[50%] flex  p-4 sm:p-8 overflow-hidden ">
-                  <div className="flex w-[50%] flex-col gap-4 sm:gap-6">
-                    <div className="flex flex-col gap-6 h-full justify-center ">
-                        <span className="text-lg sm:text-xl font-bold sm:font-extrabold">High-Quality Speaker</span>  
-                        <div className="flex flex-col gap-1">
-                            <span className="text-gray-500">Weekend Descount</span>    
-                            <div className="flex">
-                                <span className="text-xl sm:text-2xl text-red-500 font-extrabold">$129</span>
-                                <span className="text-gray-500 flex items-center ml-3">$200</span>
-                            </div>
-                        </div>                  
-                    </div>
-                  </div>
-                  <div className="w-[50%]">
-                      <img src="airpods.png" alt="img" className="max-h-[250.94px] h-full w-full object-cover"/>
-                  </div>
-                </div>
+      <div className={`${firstClass} flex flex-row group justify-center items-center w-full rounded-xl px-4 py-4 `}>
+        <div className=" flex flex-col justify-center items-start px-4 gap-5">
+            <div className="text-md sm:text-lg font-bold sm:font-semibold text-red-500 uppercase">{upperTitle}</div>
+            <div className="text-xl sm:text-2xl  font-semibold sm:font-bold text-center capitalize lg:text-left">{Title}</div>
+            <div className="font-medium flex text-center text-sm lg:text-left text-blue-gray-500 ">{discreption}</div>
+            {Button}
+            <div className={` ${secondClass} gap-4 items-center`}>
+              <div className="text-lg text-[#E33B1E] font-semibold">249$</div>
+              <div className="line-through text-[#838D97] text-sm">350$</div>
             </div>
         </div>
+        <div className="w-[100%] "><img src={image} alt="img" className="h-full object-cover"/></div>
+      </div>
     </>
   )
 }
