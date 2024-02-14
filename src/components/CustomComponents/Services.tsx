@@ -12,14 +12,14 @@ export default function Services(config: Servicesprops) {
           <div className="sm:text-3xl sm:px-0  text-[1.3rem] font-bold text-[rgb(19,23,39)]">{config.title}</div>
           <p className="text-sm sm:px-0  text-blue-gray-500">{config.discreption}</p>
         </div>
-        <div className="flex flex-col gap-8 mt-2">
+        <div className="flex  gap-8 mt-2">
           <div className="w-full flex gap-8 lg:flex-row flex-col">
               <div className="bg-[#F1E4C3] h-auto group rounded-[2rem] w-full lg:w-[65%]  p-8">
                     <div className="flex justify-between gap-6 sm:flex-row flex-col ">
                         <div className="flex flex-col gap-6 ">
                             <div className="text-2xl font-semibold"> Purchasing with insurance,  <br/>  made easy.</div>
-                            <div className="text-base font-normal max-w-[35rem]">This is our promise to you. we accept most product insurance plans both in and out of network</div>
-                            <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-52 bg-[rgb(19,23,39)] h-12 text-base rounded-full">Shop with insurance</Button>
+                              <div className="text-base font-normal max-w-[35rem]">This is our promise to you. we accept most product insurance plans both in and out of network</div>
+                              <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-52 bg-[rgb(19,23,39)] h-12 text-base rounded-full">Shop with insurance</Button>
                         </div>
                         <div className=" w-full flex items-center h-[19rem] justify-center rounded-3xl">
                         <Carousel
