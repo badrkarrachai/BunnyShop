@@ -8,7 +8,7 @@ export default function HeroSuperDeals(){
   return(
     <>
       <div className="flex my-24 gap-4 h-auto px-20">
-        <div className="w-[70%]"><HeroSuperDealsCard image="camera.png" secondClass="hidden" Title='Sony FX3 with 4k Video recording high quality' firstClass="h-[100%] bg-[#F1DEC9]" discreption="This camera is one of the best cameras in the market it's made by Sony you cannot find like it anywhere else" Button={<Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-[9rem] bg-[rgb(19,23,39)] h-12 text-base">Shop now</Button>} upperTitle="20% sales this week"/></div>
+        <div className="w-[70%]"><HeroSuperDealsCard image="camera.png" secondClass="hidden" Title='Sony FX4 with 4k Video recording high quality' firstClass="h-[100%] bg-[#F1DEC9]" discreption="This camera is one of the best cameras in the market it's made by Sony you cannot find like it anywhere else" Button={<Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-[9rem] bg-[rgb(19,23,39)] h-12 text-base">Shop now</Button>} upperTitle="20% sales this week"/></div>
         <div className="w-[30%] flex flex-col gap-4">
           <HeroSuperDealsCard image="airpods.png" Title='Sony FX3 with' secondClass="flex" firstClass="h-full bg-[#EAD7BB]" discreption="This camera is one of the best cameras" />
           <HeroSuperDealsCard image="speaker.png" Title='Sony FX3 with' secondClass="flex" firstClass="h-full bg-[#F7E6C4]" discreption="This camera is one of the best cameras" />
