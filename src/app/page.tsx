@@ -23,8 +23,7 @@ export default function Home() {
           image2="https://i.pinimg.com/originals/a6/d2/88/a6d288f294fa15336fedb05c5928e69c.jpg"
           image3="https://i.pinimg.com/564x/b1/76/0b/b1760b527fb71744f781494647c2f6be.jpg"
           image4="https://i.pinimg.com/564x/b5/1a/0c/b51a0ca63efb49d2a58b04228d6ccc69.jpg"
-          image5="https://i.pinimg.com/564x/32/d3/35/32d335068ac672d1efc5e05a806962d3.jpg"
-          btnVisibile={true}/>
+          image5="https://i.pinimg.com/564x/32/d3/35/32d335068ac672d1efc5e05a806962d3.jpg"/>
           <Categorys title='Shop by categories' discreption='You can start your shopping journey by selecting a product category.'/>
           <Services title='Services' discreption='Explore more than 10,000 products and assets with the best price.' />
           <div className='h-10'></div>
