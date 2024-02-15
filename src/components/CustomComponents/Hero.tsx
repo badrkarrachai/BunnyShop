@@ -7,7 +7,7 @@ export default function Hero() {
       <div className='sm:text-6xl text-4xl font-bold text-center text-[rgb(19,23,39)] md:max-w-[49rem] '>Your store for high quality <span className='text-[#B0926A]'>products</span></div>
       <p className='md:max-w-[44rem] text-blue-gray-500 text-center'>Welcome to Bunnyshop. Every product on our platform is verified by our team to ensure our highest quality standards</p>
       <div className="flex justify-center items-center gap-4 md:flex-row flex-col">
-        <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="w-44 bg-[#B0926A] h-12 text-base">Browse trending</Button>
+        <Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="w-48 bg-[#B0926A] h-12 text-base">Browse trending</Button>
         <Button style={{textTransform:"initial"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
             Our quality promise{" "}
             <svg

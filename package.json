@@ -11,8 +11,10 @@
   "dependencies": {
     "@material-tailwind/react": "^2.1.8",
     "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^10.18.0",
     "lucide-react": "^0.331.0",
     "mongoose": "^8.1.0",
