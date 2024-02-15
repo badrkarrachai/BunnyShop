@@ -1,7 +1,7 @@
 "use client"
-import { Button, select } from "@material-tailwind/react";
 import { FaRegHeart } from "react-icons/fa";
 import { IoMdStar } from "react-icons/io";
+import { Button } from "@material-tailwind/react";
 import {
   Select,
   SelectContent,
@@ -57,6 +57,17 @@ function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCards
                       <div className="font-bold text-base flex items-center">${priceRange1} - ${priceRange2}</div>
                   </div>
                   <div className="text-blue-gray-400 text-sm sm:text-base">{value}</div>
+                  <Select>
+                      <SelectTrigger className="w-[45%]">
+                        <SelectValue placeholder="Theme" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="light">Light</SelectItem>
+                        <SelectItem value="dark">Dark</SelectItem>
+                        <SelectItem value="system">System</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    
                   
                     
               </div>
