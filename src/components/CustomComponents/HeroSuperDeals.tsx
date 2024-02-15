@@ -7,7 +7,7 @@ import { ReactElement } from "react";
 export default function HeroSuperDeals(){
   return(
     <>
-      <div className="flex flex-col superDealsCard:flex-row my-24 gap-4 h-auto px-4 sm:px-8 lg:px-20">
+      <div className="flex flex-col superDealsCard:flex-row my-24 gap-4 h-auto px-4 sm:px-8 lg:px-20 animate-DownToUp">
         <div className="superDealsCard:w-[70%] w-full">
           <HeroSuperDealsCard image="camera.png" secondClass="hidden" Title='Sony FX4 with 4k Video recording high quality' firstClass="h-[100%] bg-[#F1DEC9]" discreption="This camera is one of the best cameras in the market it's made by Sony you cannot find like it anywhere else" Button={<Button size="md" placeholder={undefined} style={{textTransform:"initial"}} className="cursor-pointer w-[9rem] bg-[rgb(19,23,39)] h-12 text-base">Shop now</Button>} upperTitle="20% sales this week"/></div>
         <div className="superDealsCard:w-[30%] w-auto hidden superDealsCard:flex flex-col gap-4">
