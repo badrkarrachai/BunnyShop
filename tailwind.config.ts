@@ -36,7 +36,8 @@ const config: Config = withMT({
         'catToshrink1':'633px',
         'panel':'547px',
         '1024px':'1024px',
-        'superDealsCard':'1100px'
+        'superDealsCard':'1100px',
+        'sellServicesbig':'1340px',
       },
       boxShadow: {
         'new1': '-3px 3px 15px -3px rgb(0 0 0 / 0.2)',
