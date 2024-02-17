@@ -71,7 +71,7 @@ function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCards
                                 <SelectItem className="hover:bg-gray-100 hover:cursor-pointer" value="system">$100.00</SelectItem>
                             </SelectContent>
                         </Select>
-                        <Button placeholder={""} style={{textTransform:"initial"}} variant="filled" className="dark:text-[#F1F2F4]  dark:hover:bg-[#2C333A] dark:bg-[#282E33] dark:border-[#22262B] dark:outline-none flex items-center p-[0.62rem] w-full max-w-[125px] justify-center active:shadow-none hover:shadow-none bg-white text-black border shadow-none">
+                        <Button placeholder={""} style={{textTransform:"initial"}} variant="filled" className="dark:text-[#F1F2F4] dark:hover:bg-[#2C333A] dark:bg-[#282E33] dark:border-[#22262B] dark:outline-none flex items-center p-[0.62rem] w-full max-w-[125px] justify-center active:shadow-none hover:shadow-none bg-white text-black border shadow-none">
                         <AiOutlineShopping  size="1.2rem"/>
                             Add to cart
                         </Button>

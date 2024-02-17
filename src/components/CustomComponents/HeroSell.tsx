@@ -64,11 +64,11 @@ export default function HeroSell() {
             <div className="lg:w-[50%] w-[70%] flex justify-center items-center relative">
               <div id="big_image" className="flex group justify-center items-center p-10 rounded-full outline outline-2 outline-[#B0926A]" style={{ position: 'relative' }}>
                 <div className="w-full h-full flex justify-center items-center">
-                <Image alt="Sell page hero image" className="rounded-full " width={400} height={400} src={"/sellers/0.jpg"} />
-                <div className="w-full max-w-[400px] max-h-[400px] h-full rounded-full absolute group-hover:inline hidden animate-Fade bg-[#00000052]"></div>
-                <div className="w-full max-w-[400px] max-h-[400px] h-full absolute text-[#ecf0f5] animate-Fade hidden group-hover:flex items-center justify-center">
-                  <h4 className="text-3xl max-w-[20rem] text-center font-bold cursor-default">BE LIKE OUR BEST SELLERS</h4>
-                </div>
+                  <Image alt="Sell page hero image" className="rounded-full " width={400} height={400} src={"/sellers/0.jpg"} />
+                  <div className="w-full max-w-[400px] max-h-[400px] h-full rounded-full absolute group-hover:inline hidden animate-Fade bg-[#00000052]"></div>
+                  <div className="w-full max-w-[400px] max-h-[400px] h-full absolute text-[#ecf0f5] animate-Fade hidden group-hover:flex items-center justify-center">
+                    <h4 className="text-3xl max-w-[20rem] text-center font-bold cursor-default">BE LIKE OUR BEST SELLERS</h4>
+                  </div>
                 </div>
                 {smallImagePositions.map((position, index) => (
                     <img alt="Sell page hero image" key={index} style={{ left: position.x, top: position.y }} id="small_images" className="rounded-full absolute h-[50px] w-[50px] object-cover" src={`/sellers/${index+1}.jpg`} />
