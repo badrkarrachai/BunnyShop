@@ -9,7 +9,6 @@ export default function ThemeProvider() {
         const theme = localStorage.getItem("theme");
         if (theme === "dark") setTheme(true);
     },[])
-    
     useEffect(()=>{
         if(theme){
             document.documentElement.classList.add('dark')
