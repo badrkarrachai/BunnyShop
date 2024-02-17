@@ -57,3 +57,11 @@
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+  .containerd {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+  }
+  .itemd {
+    margin: 0 5px; /* Adjust the margin to control spacing between items */
+  }
