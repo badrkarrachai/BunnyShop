@@ -7,6 +7,7 @@ import { Inter as FontSans } from "next/font/google"
 import Footer from '@/components/Footer/Footer'
 import { cn } from '@/lib/utils'
 
+
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -31,19 +32,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   
- 
+  
   return (
 
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          `min-h-screen bg-background font-sans antialiased `,
           fontSans.variable
         )}>
-          
-          <Navbar/>
-          
-          {children}
-          <Footer/>
+            <div className='dark:bg-[#161A1D]'>
+              <Navbar/>
+              
+              {children}
+              <Footer/>
+            </div>
       </body>
       
     </html>

@@ -31,13 +31,13 @@ interface NavItemProps {
     const isActive = curPath === to.slice(1); // Checking if the current path matches the link
     const activeClass = isActive
       ? "text-[#B0926A] font-medium"
-      : "text-[#0e0e0e]";
+      : "text-[#0e0e0e] dark:text-white";
   
     return (
      
         <Link
           href={to}
-          className={`${type ==="0" ?"hover:bg-gray-100 rounded-3xl h-10 p-4 flex items-center justify-center":"hover:bg-gray-100 flex items-center w-full text-sm p-[0.60rem] pl-4 cursor-pointer"} ${activeClass}`}
+          className={`${type ==="0" ?"hover:bg-gray-100 dark:hover:bg-[#ffffff2c] rounded-3xl h-10 p-4 flex items-center justify-center":"hover:bg-gray-100 dark:hover:bg-[#ffffff2c] flex items-center w-full text-sm p-[0.60rem] pl-4 cursor-pointer"} ${activeClass}`}
         >
           {children}
         </Link>

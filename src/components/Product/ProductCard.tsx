@@ -18,8 +18,8 @@ export default function ProductCard(config: ProductCardPops) {
     <>
         <div className="px-1 sm:px-6 flex-col flex gap-2 animate-DownToUp">
           <div className="flex items-center justify-between">
-          <div className="sm:text-3xl text-[1.3rem] ml-4 font-bold text-[rgb(19,23,39)]">{config.title}</div>
-          {config.btnVisibile && <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="flex text-sm items-center gap-2">
+          <div className="sm:text-3xl text-[1.3rem] ml-4 font-bold text-[rgb(19,23,39)] dark:text-white">{config.title}</div>
+          {config.btnVisibile && <Button style={{textTransform:"initial",color:"#B0926A"}} placeholder={undefined} variant="text" className="dark:hover:bg-[#ffffff13] flex text-sm items-center gap-2">
             Shop the collection
             <svg
             fill="none"
@@ -37,7 +37,7 @@ export default function ProductCard(config: ProductCardPops) {
             </svg>
           </Button>}
           </div>
-          <p className="ml-4 text-sm text-blue-gray-500">{config.discreption}</p>
+          <p className="ml-4 text-sm text-blue-gray-500 dark:text-[#B3B9C4]">{config.discreption}</p>
           <div className='flex flex-wrap w-full '>
             <SmallCard image={config.image1} title="Gloss for lips from bouzakarn" price="10.00" oldPrice="25.00" category="Makeup - Beauty" />
             <SmallCard image={config.image2} title="Nike casual shoose for men" price="30.00" oldPrice="45.00" category="Clothes"/>
@@ -64,7 +64,7 @@ function SmallCard(config:smallCardsProps){
 
   return(
     <>
-      <div className="flex hover:bg-gray-100 rounded-xl  cursor-pointer group flex-col h-auto to2:w-[33.33%] to3:w-[25%] to4:w-[20%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
+      <div className="flex hover:bg-gray-100 dark:hover:bg-[#2C333A] rounded-xl  cursor-pointer group flex-col h-auto to2:w-[33.33%] to3:w-[25%] to4:w-[20%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
               <div className="flex justify-end">
               <div className="">
               <div className="ml-[-3.0rem] rounded-full hover:bg-[#b1b1b160] p-2 mt-[0.9rem] z-30 absolute "><FaRegHeart size={"1.2rem"} color={"#ffff"} /></div>
@@ -125,16 +125,16 @@ function SmallCard(config:smallCardsProps){
               </div>
               <div className="flex flex-col p-2 mt-2">
                   <div className="flex  w-full justify-between gap-1 ">
-                      <div className="font-medium text-[rgb(19,23,39)] text-sm sm:text-base">{config.title}</div>
+                      <div className="font-medium text-[rgb(19,23,39)] text-sm sm:text-base dark:text-[#F1F2F4]">{config.title}</div>
                       <div className="flex gap-[2px] text-sm sm:text-base text-[rgb(19,23,39)]">
                           <div className="sm:mt-[2px] "><IoMdStar size="18px"/></div>
                           4.48
                       </div>
 
                   </div>
-                  <div className="font-semibold text-base sm:text-lg flex items-center w-full my-1">${config.price}</div>
-                  <div className="text-blue-gray-400 flex text-sm sm:text-base">Was: $ <div className="line-through">{config.oldPrice}</div></div>
-                  <div className="text-blue-gray-400 text-sm sm:text-base">{config.category}</div>
+                  <div className="font-semibold text-base sm:text-lg flex items-center w-full my-1 dark:text-[#F1F2F4]">${config.price}</div>
+                  <div className="text-blue-gray-400 flex text-sm sm:text-base dark:text-[#B3B9C4]">Was: $ <div className="line-through">{config.oldPrice}</div></div>
+                  <div className="text-blue-gray-400 text-sm sm:text-base dark:text-[#8993A5]">{config.category}</div>
               </div>
       </div>
     </>

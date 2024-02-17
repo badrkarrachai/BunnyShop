@@ -10,17 +10,17 @@ export default function Categorys( config: Categorysprops) {
   return (
     
     <div className="sm:px-6 flex gap-3 flex-col animate-DownToUp">
-        <div className="sm:text-3xl sm:px-0 px-2 text-[1.3rem] ml-4 font-bold text-[rgb(19,23,39)]">{config.title}</div>
-        <p className="ml-4 text-sm sm:px-0 px-2 text-blue-gray-500">{config.discreption}</p>
+        <div className="sm:text-3xl sm:px-0 px-2 text-[1.3rem] ml-4 font-bold text-[rgb(19,23,39)] dark:text-white">{config.title}</div>
+        <p className="ml-4 text-sm sm:px-0 px-2 text-blue-gray-500 dark:text-[#B3B9C4]">{config.discreption}</p>
         <Carousel
         nextArrow={({ loop, handleNext, lastIndex }) => (
             <>
-            <div className="bg-gradient-to-r right-0  from-transparent  from-10% via-sky-500 via-30% to-white to-90% h-full  w-[3.9rem] flex items-end !absolute ">
+            <div className="bg-gradient-to-r right-0 dark:to-[#161A1D] from-transparent  from-10% via-sky-500 via-30% to-white to-90% h-full  w-[3.9rem] flex items-end !absolute ">
             </div>
             <button
                     onClick={handleNext}
                     disabled={!loop && lastIndex}
-                    className="!absolute  top-2/4 right-4 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[48px] h-9 max-h-[48px] text-white hover:bg-black/60 active:bg-white/30 grid place-items-center bg-[rgba(19,23,39,0.92)]"
+                    className="!absolute  top-2/4 right-4 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[48px] h-9 max-h-[48px] text-white hover:bg-black/60 active:bg-white/30 grid place-items-center dark:bg-[#4e5052] bg-[rgba(19,23,39,0.92)]"
                 >
                     <img src="chevron-right.svg" className="inline" alt="" />
             </button>
@@ -28,11 +28,11 @@ export default function Categorys( config: Categorysprops) {
         )}
         prevArrow={({ loop, handlePrev, firstIndex }) => { 
             return (
-            <div className="bg-gradient-to-r from-white from-10% via-sky-500 via-30% to-emerald-500 to-90% h-full  w-[3.9rem] !absolute">
+            <div className="bg-gradient-to-r from-white dark:from-[#161A1D] from-10% via-sky-500 via-30% to-emerald-500 to-90% h-full  w-[3.9rem] !absolute">
                 <button
                 onClick={handlePrev}
                 disabled={!loop && firstIndex}
-                className="!absolute top-2/4 left-4 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[48px] h-9 max-h-[48px] text-white hover:bg-black/60 active:bg-white/30 grid place-items-center bg-[rgb(19,23,39)]"
+                className="!absolute top-2/4 left-4 -translate-y-2/4 rounded-full select-none transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-9 max-w-[48px] h-9 max-h-[48px] text-white hover:bg-black/60 active:bg-white/30 grid place-items-center dark:bg-[#4e5052] bg-[rgb(19,23,39)]"
                 >
                 <img src="chevron-left.svg" alt="" />
                 </button>

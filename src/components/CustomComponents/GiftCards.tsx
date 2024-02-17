@@ -43,7 +43,7 @@ interface GiftCardsItemProps{
 function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCardsItemProps) {
     return(
         <>
-            <div className="flex hover:bg-gray-100 rounded-xl  cursor-pointer group flex-col h-auto to2:w-[33.33%] to3:w-[25%] to4:w-[20%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
+            <div className="flex hover:bg-gray-100 rounded-xl dark:hover:bg-[#2C333A] cursor-pointer group flex-col h-auto to2:w-[33.33%] to3:w-[25%] to4:w-[20%] prod1880:w-[20%] w-[50%] p-2 sm:p-4">
               <div className="flex justify-end">
               </div>
               <div className="sm:h-[14rem] h-[11rem] md:h-[270px]">
@@ -55,15 +55,15 @@ function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCards
               </div>
               <div className="flex flex-col p-2 mt-2 gap-5">
                 <div className="flex flex-col gap-2">
-                    <div className="font-semibold text-[rgb(19,23,39)] text-sm sm:text-base">{title}</div>
-                    <div className="font-bold text-base flex items-center">${priceRange1} - ${priceRange2}</div>
+                    <div className="font-semibold text-[rgb(19,23,39)] text-sm sm:text-base dark:text-[#F1F2F4]">{title}</div>
+                    <div className="font-bold text-base flex items-center dark:text-[#F1F2F4]">${priceRange1} - ${priceRange2}</div>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div className="text-blue-gray-400 text-sm ">{value}</div>
+                    <div className="text-blue-gray-400 text-sm dark:text-[#8993A5]">{value}</div>
                     <div className="flex sm:flex-row flex-col sm:justify-between gap-2 sm:items-center">
                         <Select>
-                            <SelectTrigger className="sm:w-[45%] max-w-[185px]">
-                                <SelectValue placeholder="$100.00" />
+                            <SelectTrigger className="sm:w-[45%] dark:text-[#F1F2F4] max-w-[185px] dark:hover:bg-[#2C333A] dark:bg-[#282E33] dark:border-[#22262B] dark:outline-none">
+                                <SelectValue  placeholder="$100.00" />
                             </SelectTrigger>
                             <SelectContent >
                                 <SelectItem className="hover:bg-gray-100 hover:cursor-pointer" value="light">$5.00</SelectItem>
@@ -71,7 +71,7 @@ function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCards
                                 <SelectItem className="hover:bg-gray-100 hover:cursor-pointer" value="system">$100.00</SelectItem>
                             </SelectContent>
                         </Select>
-                        <Button placeholder={""} style={{textTransform:"initial"}} variant="filled" className="flex items-center p-[0.62rem] w-full max-w-[125px] justify-center active:shadow-none hover:shadow-none bg-white text-black border shadow-none">
+                        <Button placeholder={""} style={{textTransform:"initial"}} variant="filled" className="dark:text-[#F1F2F4]  dark:hover:bg-[#2C333A] dark:bg-[#282E33] dark:border-[#22262B] dark:outline-none flex items-center p-[0.62rem] w-full max-w-[125px] justify-center active:shadow-none hover:shadow-none bg-white text-black border shadow-none">
                         <AiOutlineShopping  size="1.2rem"/>
                             Add to cart
                         </Button>

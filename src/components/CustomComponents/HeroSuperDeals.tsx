@@ -35,7 +35,7 @@ interface HeroSuperDealsCardProps{
 function HeroSuperDealsCard({Title, image, discreption, Button, upperTitle, firstClass, secondClass}:HeroSuperDealsCardProps) {
   return (
     <>
-      <div className={`${firstClass} flex flex-col sm:flex-row group justify-between items-center w-full rounded-xl px-4 py-8 `}>
+      <div className={`${firstClass}  flex flex-col sm:flex-row group justify-between items-center w-full rounded-xl px-4 py-8 `}>
         <div className=" flex flex-col justify-center  items-start px-4 gap-5">
             <div className="text-md sm:text-lg font-bold w-full flex justify-center sm:justify-start sm:font-semibold text-center sm:text-left text-red-500 uppercase">{upperTitle}</div>
             <div className="text-xl sm:text-2xl  font-semibold sm:font-bold capitalize text-center sm:text-left">{Title}</div>
