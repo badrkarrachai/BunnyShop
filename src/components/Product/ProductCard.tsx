@@ -126,8 +126,8 @@ function SmallCard(config:smallCardsProps){
               <div className="flex flex-col p-2 mt-2">
                   <div className="flex  w-full justify-between gap-1 ">
                       <div className="font-medium text-[rgb(19,23,39)] text-sm sm:text-base dark:text-[#F1F2F4]">{config.title}</div>
-                      <div className="flex gap-[2px] text-sm sm:text-base text-[rgb(19,23,39)]">
-                          <div className="sm:mt-[2px] "><IoMdStar size="18px"/></div>
+                      <div className="flex gap-[2px] text-sm sm:text-base text-[rgb(19,23,39)] dark:text-[#F1F2F4]">
+                          <div className="sm:mt-[2px]  "><IoMdStar size="18px"/></div>
                           4.48
                       </div>
 
