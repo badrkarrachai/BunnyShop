@@ -35,14 +35,7 @@ export default function page() {
             <div className="text-center flex flex-col gap-5 w-full items-center justify-center">
               <h4 className="text-[#B0926A] font-semibold text-lg">Export team</h4>
               <h2 className="dark:text-[#ecf0f5] text-[rgb(19,23,39)] text-3xl sm:text-5xl max-w-[39rem] font-semibold">Meet our Top sellers for this week</h2>
-              <div className="flex gap-5">
-                  <img src="/sellers/1.jpg" alt="people1" className="rounded-full w-32 h-32 object-cover" />
-                  <img src="/sellers/2.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
-                  <img src="/sellers/3.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
-                  <img src="/sellers/4.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
-                  <img src="/sellers/5.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
-
-              </div>
+              
             </div>
           </div>
         </div>
