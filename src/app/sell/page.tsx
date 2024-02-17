@@ -6,7 +6,7 @@ import { LuCalendarDays } from "react-icons/lu";
 export default function page() {
   return (
     <>
-      <div className="space-y-28 py-">
+      <div className="space-y-28">
         <HeroSell/>
         <div className="flex justify-center items-center px-4">
           <div className="max-w-[100rem] space-y-12">
@@ -31,6 +31,18 @@ export default function page() {
                 <p className="max-w-[3rem] text-2xl font-semibold">Interested customers</p>
               </div>
 
+            </div>
+            <div className="text-center flex flex-col gap-5 w-full items-center justify-center">
+              <h4 className="text-[#B0926A] font-semibold text-lg">Export team</h4>
+              <h2 className="dark:text-[#ecf0f5] text-[rgb(19,23,39)] text-3xl sm:text-5xl max-w-[39rem] font-semibold">Meet our Top sellers for this week</h2>
+              <div className="flex gap-5">
+                  <img src="/sellers/1.jpg" alt="people1" className="rounded-full w-32 h-32 object-cover" />
+                  <img src="/sellers/2.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
+                  <img src="/sellers/3.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
+                  <img src="/sellers/4.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
+                  <img src="/sellers/5.jpg" alt="people2" className="rounded-full w-32 h-32 object-cover" />
+
+              </div>
             </div>
           </div>
         </div>
