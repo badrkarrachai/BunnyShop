@@ -4,14 +4,14 @@ import { MdPerson } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
 import { BsCart2 } from "react-icons/bs";
 import { AiOutlinePercentage } from "react-icons/ai";
-import { MdPayment } from "react-icons/md";
+import { GoCreditCard } from "react-icons/go";
 
 
 
 export default function page() {
   return (
     <>
-      <div className="space-y-28">
+      <div className="sm:space-y-28 space-y-14">
         <HeroSell/>
         <div className="flex justify-center items-center px-4 animate-DownToUp">
           <div className="max-w-[100rem] space-y-28">
@@ -38,7 +38,7 @@ export default function page() {
                 </div>
               </div>
             </div>
-            <div className="text-center flex flex-col gap-5 w-full items-center py-24 justify-center">
+            <div className="text-center flex flex-col gap-5 w-full items-center sm:py-10 justify-center">
               <h4 className="text-[#B0926A] font-semibold text-lg">TOP SELLERS</h4>
               <h2 className="dark:text-[#ecf0f5] text-[rgb(19,23,39)] text-3xl sm:text-5xl max-w-[39rem] font-semibold">Meet our top sellers for this week</h2>
               <div className="containerd gap-4 w-full max-w-[75rem] ">
@@ -89,21 +89,21 @@ export default function page() {
                   </div>
               </div>
             </div>
-            <div className="text-center flex   w-full pb-24 items-center  justify-center px-4">
-              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
-                  <span><BsCart2 color="#B0926A" size="40px"/></span>
-                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Free Shipping</span>
-                  <span className="text-[#B3B9C4] max-w-[20rem]">Unlock the savings! Get your favorite items delivered to your doorstep with free shipping on every order. </span>
+            <div className="text-center flex  w-full pb-24 items-center flex-wrap gap-9 sm:gap-0 justify-center px-0 sm:px-4">
+              <div className="flex flex-col gap-4 items-center justify-center px-4 sm:w-[33.33%]">
+                  <span><BsCart2 color="#B0926A" size="55px"/></span>
+                  <span className="font-medium text-base md:text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Free Shipping</span>
+                  <span className="text-blue-gray-500  text-sm md:text-base dark:text-[#B3B9C4] max-w-[20rem]">Unlock the savings! Get your favorite items delivered to your doorstep with free shipping on every order. </span>
               </div>
-              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
-                  <span><AiOutlinePercentage color="#B0926A" size="40px"/></span>
-                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Top Discount</span>
-                  <span className="text-[#B3B9C4] max-w-[20rem]">Score unbeatable deals on your favorite products with our top discount service - saving you money on every purchase! </span>
+              <div className="flex flex-col gap-4 items-center justify-center px-2 sm:px-4 dark:border-x-[#22262B] sm:border-x sm:w-[33.33%]">
+                  <span><AiOutlinePercentage color="#B0926A" size="55px"/></span>
+                  <span className="font-medium text-base md:text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Top Discount</span>
+                  <span className="text-blue-gray-500 text-sm md:text-base dark:text-[#B3B9C4] max-w-[20rem]">Score unbeatable deals on your favorite products with our top discount service - saving you money on every purchase!. </span>
               </div>
-              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
-                  <span><MdPayment color="#B0926A" size="40px"/></span>
-                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Safe Payments</span>
-                  <span className="text-[#B3B9C4] max-w-[20rem]">Shop with peace of mind knowing your transactions are secure with our safe payment service, employing industry-leading encryption technology </span>
+              <div className="flex flex-col gap-4 items-center justify-center px-4 sm:w-[33.33%]">
+                  <span><GoCreditCard  color="#B0926A" size="55px"/></span>
+                  <span className="font-medium text-base md:text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Safe Payments</span>
+                  <span className="text-blue-gray-500 text-sm md:text-base dark:text-[#B3B9C4] max-w-[20rem]">Rest assured with our secure payment service, using top encryption for worry-free transactions.</span>
               </div>
             </div>
           </div>

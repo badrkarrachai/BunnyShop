@@ -57,7 +57,7 @@ export default function HeroSell() {
                       type="text"
                       id="Product_name"
                       placeholder="Enter your product name" />
-                  <Button placeholder={""} type="submit" className="min-w-[8rem] dark:text-[#ecf0f5]  bg-[#B0926A] rounded-full text-base sm:py-4" style={{textTransform:"initial"}}>Sell</Button>
+                  <Button placeholder={""} type="submit" className="sm:min-w-[8rem] min-w-[5rem] dark:text-[#ecf0f5]  bg-[#B0926A] rounded-full text-base sm:py-4" style={{textTransform:"initial"}}>Sell</Button>
                 </div>
                 
             </div>
