@@ -2,6 +2,11 @@ import HeroSell from "@/components/CustomComponents/HeroSell";
 import { FiPieChart } from "react-icons/fi";
 import { MdPerson } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
+import { BsCart2 } from "react-icons/bs";
+import { AiOutlinePercentage } from "react-icons/ai";
+import { MdPayment } from "react-icons/md";
+
+
 
 export default function page() {
   return (
@@ -82,7 +87,23 @@ export default function page() {
                       <h3 className="text-[#ecf0f5] cursor-default">Jimmy Newton</h3>
                     </div>
                   </div>
-
+              </div>
+            </div>
+            <div className="text-center flex   w-full pb-24 items-center  justify-center px-4">
+              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
+                  <span><BsCart2 color="#B0926A" size="40px"/></span>
+                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Free Shipping</span>
+                  <span className="text-[#B3B9C4] max-w-[20rem]">Unlock the savings! Get your favorite items delivered to your doorstep with free shipping on every order. </span>
+              </div>
+              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
+                  <span><AiOutlinePercentage color="#B0926A" size="40px"/></span>
+                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Top Discount</span>
+                  <span className="text-[#B3B9C4] max-w-[20rem]">Score unbeatable deals on your favorite products with our top discount service - saving you money on every purchase! </span>
+              </div>
+              <div className="flex flex-col gap-4 items-center justify-center w-[33.33%]">
+                  <span><MdPayment color="#B0926A" size="40px"/></span>
+                  <span className="font-medium text-lg dark:text-[#ecf0f5] text-[rgb(19,23,39)]">Safe Payments</span>
+                  <span className="text-[#B3B9C4] max-w-[20rem]">Shop with peace of mind knowing your transactions are secure with our safe payment service, employing industry-leading encryption technology </span>
               </div>
             </div>
           </div>
