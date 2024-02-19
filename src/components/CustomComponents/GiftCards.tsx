@@ -48,10 +48,10 @@ function GiftCardsItem({image, title, priceRange1, priceRange2, value}:GiftCards
               </div>
               <div className="sm:h-[14rem] h-[11rem] md:h-[270px]">
                 <img
-                                src={image}
-                                alt="image 3"
-                                className="rounded-xl h-full w-full object-cover"
-                            />
+                    src={image}
+                    alt="image 3"
+                    className="rounded-xl h-full w-full object-cover"
+                />
               </div>
               <div className="flex flex-col p-2 mt-2 gap-5">
                 <div className="flex flex-col gap-2">

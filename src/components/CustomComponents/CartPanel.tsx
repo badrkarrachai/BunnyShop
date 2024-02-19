@@ -19,7 +19,7 @@ function CartPanel(config:CartPanelProps) {
             <div className='sm:px-8 px-5 pt-5 sm:pt-8'>
               <div className='border-b-2 dark:border-b-[#22262B] mt-[-1rem] py-4 flex justify-between items-center'>
                 <h3 className='font-semibold text-lg dark:text-white'>Cart (1) </h3>
-                <div onClick={()=>config.isVisible(false)}  className='hover:bg-gray-100 p-1 cursor-pointer rounded-full'>
+                <div onClick={()=>config.isVisible(false)}  className='hover:bg-gray-100 dark:hover:bg-[#ffffff13] p-1 cursor-pointer rounded-full'>
                   <div className='dark:hidden'><IoClose size="1.3rem" /></div>
                   <div className='dark:inline hidden'><IoClose color="#ffff" size="1.3rem" /></div>
                 </div>

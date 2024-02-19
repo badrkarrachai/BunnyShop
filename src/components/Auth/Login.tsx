@@ -22,14 +22,12 @@ export default function Login(config:LogInProps) {
     <div className='w-full h-full fixed inset-0 backdrop-blur-sm bg-[#02020267] dark:bg-[#ffffff1a] flex justify-center items-end phone:items-center z-30 phone:py-11'>
       <OutsideAlerter classOfIt="  rounded-xl shadow-lg w-full phone:w-[568px] h-auto max-h-[700px]" setVisible={config.isVisible}>
         <motion.div initial={{y:'100%',opacity:0}}  animate={{y:0,opacity:1}} className='bg-white dark:bg-[#161A1D] rounded-xl shadow-lg w-full phone:w-[568px] h-full max-h-[700px] '>
-          <div className="border-b dark:border-b-[#22262B] py-4 flex items-center px-5 ">
-            <div className="hover:bg-gray-100 p-2 cursor-pointer rounded-full" onClick={()=>config.isVisible(false)}>
+          <div className="border-b dark:border-b-[#22262B] py-4 flex items-center justify-center px-6  ">
+            <div className="hover:bg-gray-100 p-2 absolute left-6 dark:hover:bg-[#ffffff13] cursor-pointer rounded-full" onClick={()=>config.isVisible(false)}>
               <div className="dark:hidden"><IoClose size="1.2rem" color="#262626" /></div>
-              <div className="dark:inline"><IoClose size="1.2rem" color="#e7e7e7" /></div>
+              <div className="dark:inline hidden"><IoClose size="1.2rem" color="#e7e7e7" /></div>
             </div>
-            <div className="w-full flex justify-center">
-            <span className="text-center font-semibold dark:text-white ">Log in or sign up</span>
-            </div>
+            <span className="text-center font-semibold dark:text-white ">LOGIN</span>
           </div>
           <div className="flex flex-col gap-5 px-6 sm:px-10 py-4 sm:py-10">
 
